@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts.gstatic.com/s/dmsans/v11/rP2Hp2ywxg089UriOZU.eot"/*tpa=https://fonts.gstatic.com/s/dmsans/v11/rP2Hp2ywxg089UriOZU.eot*/);
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrFJE.eot"/*tpa=https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrFJE.eot*/);
+}
