@@ -1,3 +1,10 @@
 .navbar-expand-xl.navbar-divider {
     border: none;
 }
+.mx-end {
+    margin-right: 0 !important;
+    margin-left: auto !important;
+}
+.no-border {
+    border-bottom: none !important;
+}
