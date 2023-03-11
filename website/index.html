@@ -520,39 +520,46 @@
 
 <!-- Login modal START -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-body">
-                <div class="p-4 p-sm-5">
-                    <h1 class="mb-2 h3">Welcome back</h1>
-					<p class="mb-0">New here?<a href="#" data-bs-target="#registerModal" data-bs-toggle="modal" data-bs-dismiss="modal"> Create an account</a></p>
-                    <form class="mt-4 text-start">
-                        <div class="mb-3">
-                            <label class="form-label">Enter your username</label>
-                            <input type="username" class="form-control" control-id="ControlID-1">
+                <div class="row g-0">
+                    <div class="col-lg-6 d-flex align-items-center text-center order-2 order-lg-1">
+                        <img src="assets/images/element/login.svg" alt="">
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2">
+                        <div class="p-4 p-sm-5">
+                            <h1 class="mb-2 h3">Welcome back</h1>
+                            <p class="mb-0">New here?<a href="#" data-bs-target="#registerModal" data-bs-toggle="modal" data-bs-dismiss="modal"> Create an account</a></p>
+                            <form class="mt-4 text-start">
+                                <div class="mb-3">
+                                    <label class="form-label">Enter your username</label>
+                                    <input type="username" class="form-control" control-id="ControlID-1">
+                                </div>
+                                <div class="mb-3 position-relative">
+                                    <label class="form-label">Enter password</label>
+                                    <input class="form-control fakepassword" type="password" id="psw-input" control-id="ControlID-2">
+                                    <span class="position-absolute top-50 end-0 translate-middle-y p-0 mt-3">
+                                        <i class="fakepasswordicon fas fa-eye-slash cursor-pointer p-2"></i>
+                                    </span>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label w-100">Enter captcha<img src="https://new.basetao.com/best-taobao-agent-service/show_code.html" class="float-end" id="captcha" style="cursor: pointer;" onclick="this.src=this.src+'?d='+Math.random();" title="Click the refresh" alt="captcha"></label>
+                                    <input type="captcha" class="form-control" control-id="ControlID-1">
+                                    
+                                </div>
+                                <div class="mb-3 d-sm-flex justify-content-between">
+                                    <div>
+                                        <input type="checkbox" class="form-check-input" id="rememberCheck" control-id="ControlID-3">
+                                        <label class="form-check-label" for="rememberCheck">Remember me?</label>
+                                    </div>
+                                    <a href="#" data-bs-target="#forgotModal" data-bs-toggle="modal" data-bs-dismiss="modal">Forgot password?</a>
+                                </div>
+                                <!-- Button -->
+                                <div><a href="index-loggedin.html" type="submit"  class="btn btn-primary w-100 mb-0" control-id="ControlID-4">Login</a></div>
+                            </form>
                         </div>
-                        <div class="mb-3 position-relative">
-                            <label class="form-label">Enter password</label>
-                            <input class="form-control fakepassword" type="password" id="psw-input" control-id="ControlID-2">
-                            <span class="position-absolute top-50 end-0 translate-middle-y p-0 mt-3">
-                                <i class="fakepasswordicon fas fa-eye-slash cursor-pointer p-2"></i>
-                            </span>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label w-100">Enter captcha<img src="https://new.basetao.com/best-taobao-agent-service/show_code.html" class="float-end" id="captcha" style="cursor: pointer;" onclick="this.src=this.src+'?d='+Math.random();" title="Click the refresh" alt="captcha"></label>
-                            <input type="captcha" class="form-control" control-id="ControlID-1">
-                            
-                        </div>
-                        <div class="mb-3 d-sm-flex justify-content-between">
-                            <div>
-                                <input type="checkbox" class="form-check-input" id="rememberCheck" control-id="ControlID-3">
-                                <label class="form-check-label" for="rememberCheck">Remember me?</label>
-                            </div>
-                            <a href="forgot-password.html">Forgot password?</a>
-                        </div>
-                        <!-- Button -->
-                        <div><a href="index-loggedin.html" type="submit"  class="btn btn-primary w-100 mb-0" control-id="ControlID-4">Login</a></div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -561,49 +568,90 @@
 <!-- Login modal END -->
 <!-- Register modal START -->
 <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModal" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-body">
-                <div class="p-4 p-sm-5">
-                    <h1 class="mb-2 h3">Create account</h1>
-					<p class="mb-0">Already a member?<a href="#" data-bs-target="#loginModal" data-bs-toggle="modal" data-bs-dismiss="modal"> Log in</a></p>
-                    <form class="mt-4 text-start">
-                        <div class="mb-3">
-                            <label class="form-label">Enter your username</label>
-                            <input type="username" class="form-control" control-id="ControlID-1">
+                <div class="row g-0">
+                    <div class="col-lg-6 d-flex align-items-center text-center order-2 order-lg-1">
+                        <img src="assets/images/element/signup.svg" alt="">
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2">
+                        <div class="p-4 p-sm-5">
+                            <h1 class="mb-2 h3">Create account</h1>
+                            <p class="mb-0">Already a member?<a href="#" data-bs-target="#loginModal" data-bs-toggle="modal" data-bs-dismiss="modal"> Log in</a></p>
+                            <form class="mt-4 text-start">
+                                <div class="mb-3">
+                                    <label class="form-label">Enter your username</label>
+                                    <input type="username" class="form-control" control-id="ControlID-1">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Enter your e-mail</label>
+                                    <input type="email" class="form-control" placeholder="name@example.com" control-id="ControlID-1">
+                                </div>
+                                <div class="mb-3 position-relative">
+                                    <label class="form-label">Enter password</label>
+                                    <input class="form-control fakepassword" type="password" placeholder="••••••••••" id="psw-input" control-id="ControlID-2">
+                                    <span class="position-absolute top-50 end-0 translate-middle-y p-0 mt-3">
+                                        <i class="fakepasswordicon fas fa-eye-slash cursor-pointer p-2"></i>
+                                    </span>
+                                </div>
+                                <div class="mb-3 position-relative">
+                                    <label class="form-label">Confirm password</label>
+                                    <input class="form-control fakepassword" type="password" placeholder="••••••••••" id="psw-input" control-id="ControlID-2">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label w-100">Enter captcha<img src="https://new.basetao.com/best-taobao-agent-service/show_code.html" class="float-end" id="captcha" style="cursor: pointer;" onclick="this.src=this.src+'?d='+Math.random();" title="Click the refresh" alt="captcha"></label>
+                                    <input type="captcha" class="form-control" control-id="ControlID-1">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Referral code</label>
+                                    <input type="username" class="form-control" placeholder="community" value="community" control-id="ControlID-1">
+                                </div>
+                                <!-- Button -->
+                                <div><a href="index-loggedin.html" type="submit"  class="btn btn-primary w-100 mb-0" control-id="ControlID-4">Sign up</a></div>
+                            </form>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Enter your e-mail</label>
-                            <input type="email" class="form-control" placeholder="name@example.com" control-id="ControlID-1">
-                        </div>
-                        <div class="mb-3 position-relative">
-                            <label class="form-label">Enter password</label>
-                            <input class="form-control fakepassword" type="password" placeholder="••••••••••" id="psw-input" control-id="ControlID-2">
-                            <span class="position-absolute top-50 end-0 translate-middle-y p-0 mt-3">
-                                <i class="fakepasswordicon fas fa-eye-slash cursor-pointer p-2"></i>
-                            </span>
-                        </div>
-                        <div class="mb-3 position-relative">
-                            <label class="form-label">Confirm password</label>
-                            <input class="form-control fakepassword" type="password" placeholder="••••••••••" id="psw-input" control-id="ControlID-2">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label w-100">Enter captcha<img src="https://new.basetao.com/best-taobao-agent-service/show_code.html" class="float-end" id="captcha" style="cursor: pointer;" onclick="this.src=this.src+'?d='+Math.random();" title="Click the refresh" alt="captcha"></label>
-                            <input type="captcha" class="form-control" control-id="ControlID-1">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Referral code</label>
-                            <input type="username" class="form-control" placeholder="community" value="community" control-id="ControlID-1">
-                        </div>
-                        <!-- Button -->
-                        <div><a href="index-loggedin.html" type="submit"  class="btn btn-primary w-100 mb-0" control-id="ControlID-4">Sign up</a></div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- Register modal END -->
+<!-- Forgot password modal START -->
+<div class="modal fade" id="forgotModal" tabindex="-1" aria-labelledby="forgotModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row g-0">
+                    <div class="col-lg-6 d-flex align-items-center text-center order-2 order-lg-1">
+                        <img src="assets/images/element/forgot-password.svg" alt="">
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2">
+                        <div class="p-4 p-sm-5">
+                            <h1 class="mb-2 h3">Forgot password?</h1>
+                            <p class="mb-0">If you don't receive the email with the activated code after registering, please ensure to add info@basetao.com to your email's whitelist.</p>
+                            <form class="mt-4 text-start">
+                                <div class="mb-3">
+                                    <label class="form-label">Enter your email</label>
+                                    <input type="username" class="form-control" control-id="ControlID-1">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label w-100">Enter captcha<img src="https://new.basetao.com/best-taobao-agent-service/show_code.html" class="float-end" id="captcha" style="cursor: pointer;" onclick="this.src=this.src+'?d='+Math.random();" title="Click the refresh" alt="captcha"></label>
+                                    <input type="captcha" class="form-control" control-id="ControlID-1">
+                                    
+                                </div>
+                                <!-- Button -->
+                                <div><a href="index-loggedin.html" type="submit"  class="btn btn-primary w-100 mb-0" control-id="ControlID-4">Reset password</a></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Forgot password modal END -->
 
 <!-- =======================
 Footer START -->
@@ -676,7 +724,7 @@ Footer START -->
 					<div class="nav mt-2 mt-lg-0">
 						<ul class="list-inline text-primary-hover mx-auto mb-0">
 							<li class="list-inline-item me-0"><a class="nav-link py-1 text-muted" href="privacy_policy.html">Privacy policy</a></li>
-							<li class="list-inline-item me-0"><a class="nav-link py-1 text-muted" href="terms_and_conditions.html">Terms and conditions</a></li>
+							<li class="list-inline-item me-0"><a class="nav-link py-1 text-muted" href="terms_and_conditions.html">Terms of service</a></li>
 						</ul>
 					</div>
 				</div>

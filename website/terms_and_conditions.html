@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Basetao | Homepage</title>
+	<title>Basetao | Terms of service</title>
 
 	<!-- Meta Tags -->
 	<meta charset="utf-8">
@@ -100,10 +100,10 @@
 <body class="has-navbar-mobile">
 
     <!-- Header START -->
-    <header class="navbar-light header-sticky">
-        <!-- Nav START -->
-        <nav class="navbar navbar-expand-xl z-index-9 navbar-divider">
-            <div class="container">
+    <header class="header-sticky">
+        <!-- Logo Nav START -->
+        <nav class="navbar navbar-light navbar-expand-xl">
+            <div class="container-fluid px-md-5">
                 <!-- Logo START -->
                 <a class="navbar-brand" href="#">
                     <img class="light-mode-item navbar-brand-item" src="assets/images/logo.svg" alt="logo">
@@ -113,11 +113,6 @@
 
                 <!-- Responsive navbar toggler -->
                 <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="bi bi-search fs-4"> </i>
-                </button>
-
-                <!-- Responsive navbar toggler -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse2" aria-controls="navbarCollapse2" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-animation">
                         <span></span>
                         <span></span>
@@ -127,26 +122,69 @@
 
                 <!-- Main navbar START -->
                 <div class="navbar-collapse collapse" id="navbarCollapse">
-                    <!-- Nav Search START -->
-                    <div class="col-xxl-6">
-                        <div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
-                            <div class="nav-item w-100">
-                                <form class="rounded position-relative">
-                                    <input class="form-control pe-5 bg-secondary bg-opacity-10" type="search" placeholder="Search" aria-label="Search">
-                                    <button class="btn btn-link bg-transparent px-2 py-0 position-absolute top-50 end-0 translate-middle-y" type="submit"><i class="fas fa-search fs-6 text-primary"></i></button>
-                                </form>
+                    <ul class="navbar-nav navbar-nav-scroll mx-end">
+                        
+                        <!-- Nav item -->
+                        <li class="nav-item"> <a class="nav-link" href="index-loggedin.html">Homepage</a></li>
+                        
+                        <!-- Nav item -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pageMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Buy for me</a>
+                            <ul class="dropdown-menu" aria-labelledby="pageMenu">
+                                <!-- Dropdown submenu -->
+                                <li> <a class="dropdown-item" href="buy_works.html">How it works</a></li>
+                                <li> <a class="dropdown-item" href="self_help_order.html">Self-help order</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Nav item -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pageMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ship for me</a>
+                            <ul class="dropdown-menu" aria-labelledby="pageMenu">
+                                <!-- Dropdown submenu -->
+                                <li> <a class="dropdown-item" href="ship_works.html">How it works</a></li>
+                                <li> <a class="dropdown-item" href="make_a_parcel.html">Make a parcel</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Nav item -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pageMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help center</a>
+                            <ul class="dropdown-menu" aria-labelledby="pageMenu">
+                                <!-- Dropdown submenu -->
+                                <li> <a class="dropdown-item" href="faq.html">FAQ</a></li>
+                                <li> <a class="dropdown-item" href="search_for_me.html">Search for me</a></li>
+                                <li> <a class="dropdown-item" href="mail_issue.html">Mail issue</a></li>
+                                <li> <a class="dropdown-item" href="cost_calculator.html">Cost calculator</a></li>
+                            </ul>
+                        </li>
+                        <!-- Nav Search START -->
+                            <div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-left">
+                                <div class="nav-item w-100 no-border">
+                                    <form class="position-relative mt-xl-2">
+                                        <input class="form-control pe-5 bg-secondary bg-opacity-10" type="search" placeholder="Search" aria-label="Search">
+                                        <button class="btn btn-link bg-transparent px-2 py-0 position-absolute top-50 end-0 translate-middle-y" type="submit"><i class="fas fa-search fs-6 text-primary"></i></button>
+                                    </form>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- Nav Search END -->
+                        <!-- Nav Search END -->
+                    </ul>
                 </div>
                 <!-- Main navbar END -->
 
-                <!-- Profile and notification START -->
+                <!-- Profile and Notification START -->
                 <ul class="nav flex-row align-items-center list-unstyled ms-xl-auto">
 
+                    <!-- Shopping cart START -->
+                    <li class="nav-item dropdown ms-0 ms-md-3">
+                        <a class="nav-notification btn btn-light p-0 mb-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                            <i class="bi bi-cart fa-fw"></i>
+                        </a>
+                    </li>
+                    <!-- Shopping cart END -->
+
                     <!-- Notification dropdown START -->
-                    <li class="nav-item ms-0 ms-md-3 dropdown">
+                    <li class="nav-item dropdown ms-0 ms-md-3">
                         <!-- Notification button -->
                         <a class="nav-notification btn btn-light p-0 mb-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                             <i class="bi bi-bell fa-fw"></i>
@@ -155,7 +193,7 @@
                         <span class="notif-badge animation-blink"></span>
 
                         <!-- Notification dropdown menu START -->
-                        <div class="dropdown-menu dropdown-animation dropdown-menu-end dropdown-menu-size-md p-0 shadow-lg">
+                        <div class="dropdown-menu dropdown-animation dropdown-menu-end dropdown-menu-size-md shadow-lg p-0">
                             <div class="card bg-transparent">
                                 <!-- Card header -->
                                 <div class="card-header bg-transparent d-flex justify-content-between align-items-center border-bottom">
@@ -201,7 +239,6 @@
                             <img class="avatar-img rounded-2" src="assets/images/avatar/01.jpg" alt="avatar">
                         </a>
 
-                        <!-- Profile dropdown START -->
                         <ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3" aria-labelledby="profileDropdown">
                             <!-- Profile info -->
                             <li class="px-3 mb-3">
@@ -219,9 +256,9 @@
 
                             <!-- Links -->
                             <li> <hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Settings</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-person-fill fa-fw me-2"></i>My account</a></li>
                             <li><a class="dropdown-item" href="#"><i class="bi bi-currency-yen fa-fw me-2"></i>Top-up</a></li>
-                            <li><a class="dropdown-item bg-danger-soft-hover" href="#"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
+                            <li><a class="dropdown-item bg-danger-soft-hover" href="index.html"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
                             <li> <hr class="dropdown-divider"></li>
 
                             <!-- Dark mode options START -->
@@ -251,127 +288,115 @@
                             </li> 
                             <!-- Dark mode options END-->
                         </ul>
-                        <!-- Profile dropdown END -->
                     </li>
                     <!-- Profile dropdown END -->
                 </ul>
-                <!-- Profile and notification END -->
+                <!-- Profile and Notification START -->
+
             </div>
         </nav>
-        <!-- Nav END -->
-
-        <!--Main menu link START -->
-        <nav class="navbar navbar-expand-xl navbar-divider">
-            <div class="container px-0">
-                <!-- Main navbar START -->
-                <div class="navbar-collapse w-100 collapse" id="navbarCollapse2">
-                    <!-- Nav Main menu START -->
-                    <ul class="navbar-nav nav-active-line navbar-nav-scroll mx-auto">
-
-                        <!-- Nav item -->
-                        <li class="nav-item"> <a class="nav-link active" href="#">Homepage</a></li>
-                        
-                        <!-- Nav item -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="pageMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Buy for me</a>
-                            <ul class="dropdown-menu" aria-labelledby="pageMenu">
-                                <!-- Dropdown submenu -->
-                                <li> <a class="dropdown-item" href="#">How it works</a></li>
-                                <li> <a class="dropdown-item" href="#">Self-help order</a></li>
-                            </ul>
-                        </li>
-
-                        <!-- Nav item -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="pageMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ship for me</a>
-                            <ul class="dropdown-menu" aria-labelledby="pageMenu">
-                                <!-- Dropdown submenu -->
-                                <li> <a class="dropdown-item" href="#">How it works</a></li>
-                                <li> <a class="dropdown-item" href="#">Make a parcel</a></li>
-                            </ul>
-                        </li>
-
-                        <!-- Nav item -->
-                        <li class="nav-item"> <a class="nav-link" href="#">Search for me</a></li>
-
-                        <!-- Nav item -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="pageMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help center</a>
-                            <ul class="dropdown-menu" aria-labelledby="pageMenu">
-                                <!-- Dropdown submenu -->
-                                <li> <a class="dropdown-item" href="#">FAQ</a></li>
-                                <li> <a class="dropdown-item" href="#">Mail issue</a></li>
-                                <li> <a class="dropdown-item" href="#">Cost calculator</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Main navbar END -->
-            </div>
-        </nav>
-        <!--Main menu link END -->
+        <!-- Logo Nav END -->
     </header>
     <!-- Header END -->
 
 <!-- **************** MAIN CONTENT START **************** -->
 <main>
 
-    <!-- =======================
-    Main Banner START -->
+    <!-- ======================= Main Banner START -->
     <section class="py-0">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-11 mx-auto">
-                    <!-- Slider START -->
-                    <div class="tiny-slider arrow-round arrow-blur arrow-hover rounded-3 overflow-hidden">
-                        <div class="tiny-slider-inner" data-gutter="0" data-arrow="true" data-dots="false" data-items="1">
-                            <!-- Card item START -->
-                            <div class="card overflow-hidden h-400px h-sm-600px rounded-0" style="background-image:url(assets/images/category/homepage/bg-01.jpg); background-position: center left; background-size: cover;">
-                                <!-- Background dark overlay -->
-                                <div class="bg-overlay bg-dark opacity-3"></div>
-                                <!-- Card image overlay -->
-                                <div class="card-img-overlay d-flex align-items-center"> 
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-11 col-lg-7">
-                                                <h1 class="text-white display-6">Reliable agent</h1>
-                                                <h6 class="text-white fw-normal mb-0">We are Basetao, a professional shopping agency in China. We buy products from China online shops for You and ship them to your house. Take advantage of our service!</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card item END -->
-
-                            <!-- Card item START -->
-                            <div class="card overflow-hidden h-400px h-sm-600px rounded-0" style="background-image:url(assets/images/category/homepage/bg-02.jpg); background-position: center left; background-size: cover;">
-                                <!-- Background dark overlay -->
-                                <div class="bg-overlay bg-dark opacity-3"></div>
-                                <!-- Card image overlay -->
-                                <div class="card-img-overlay d-flex align-items-center"> 
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-11 col-lg-7">
-                                                <h1 class="text-white display-6">Worldwide forwarding</h1>
-                                                <h6 class="text-white fw-normal mb-0">More than just a shopping agency, we are also forwarding parcels from China to worldwide enjoy your shopping freely in China. Let us take care of shipping for you.</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card item END -->
-                        </div>
-                    </div>
-                    <!-- Slider END -->
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-md-4 mt-lg-7 pt-lg-5 text-center text-lg-end">
+                    <h1>Terms of service</h1>
+                </div>
+                <div class="col-md-4 mt-lg-3 d-none d-lg-block text-start">
+                    <img src="assets/images/element/terms.svg" alt="">
                 </div>
             </div>
         </div>
     </section>
-    <!-- =======================
-    Main Banner END -->
-                                        
-                                    
-								
+    <section class="py-0">
+        <div class="container">
+            <div class="row col-md-10 mx-auto">
+                <div class="vstack">
+                    <div class="card p-0 bg-transparent">
+						<div class="card-header border-bottom bg-transparent px-0">
+							<h4 class="card-title mb-0">Acceptance of terms</h4>
+						</div>
+						<div class="card-body px-0">
+							<p>Welcome to basetao.com! Our services are subject to the following Terms of Service ("TOS"), which we may update from time to time without notice. We recommend that you review this page periodically to stay informed of any changes. By visiting or ordering from Basetao.com, you agree to these terms. Please read them carefully. Additionally, when you use any current or future Basetao service or business, you will be subject to the corresponding guidelines, terms, and agreements.</p>
+						</div>
+					</div>
+                    <div class="card p-0 bg-transparent">
+						<div class="card-header border-bottom bg-transparent px-0">
+							<h4 class="card-title mb-0">Electronic communication</h4>
+						</div>
+						<div class="card-body px-0">
+							<p>By visiting basetao.com or sending emails to us, you are communicating with us electronically and consenting to receive electronic communications from us. We will communicate with you via email or by sending messages on this site. You agree that all agreements, notices, disclosures, and other communications that we provide to you electronically meet any legal requirement that such communications be in writing.</p>
+						</div>
+					</div>
+                    <div class="card p-0 bg-transparent">
+						<div class="card-header border-bottom bg-transparent px-0">
+							<h4 class="card-title mb-0">Your account, password and security</h4>
+						</div>
+						<div class="card-body px-0">
+							<p>By using this site, you are responsible for keeping your account and password confidential and for any activities that occur under your account. It is your responsibility to log out of your account at the end of each session and inform basetao immediately if there is any unauthorized use of your password or account. Basetao is not liable for any loss or damage resulting from the compromise of your account.</p>
+						</div>
+					</div>
+                    <div class="card p-0 bg-transparent">
+						<div class="card-header border-bottom bg-transparent px-0">
+							<h4 class="card-title mb-0">Registration</h4>
+						</div>
+						<div class="card-body px-0">
+							<p>When you register, you agree that your email address is valid and to receive newsletters and advertisements from us. If you wish to cancel email communications from our company, please contact our service department at basetao2you@163.com.</p>
+						</div>
+					</div>
+                    <div class="card p-0 bg-transparent">
+						<div class="card-header border-bottom bg-transparent px-0">
+							<h4 class="card-title mb-0">General prohibitions</h4>
+						</div>
+						<div class="card-body px-0">
+							<p></p>
+						</div>
+					</div>
+                    <div class="card p-0 bg-transparent">
+						<div class="card-header border-bottom bg-transparent px-0">
+							<h4 class="card-title mb-0">Links</h4>
+						</div>
+						<div class="card-body px-0">
+							<p>Basetao may provide links to third-party websites or resources. By using these links, you acknowledge and agree that Basetao is not responsible for the availability of such external sites or resources and does not endorse or accept responsibility for any content, advertising, products, or other materials on or available from such sites or resources. Additionally, you acknowledge and agree that Basetao will not be liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services available on or through any such site or resource.</p>
+						</div>
+					</div>
+                    <div class="card p-0 bg-transparent">
+						<div class="card-header border-bottom bg-transparent px-0">
+							<h4 class="card-title mb-0">Copyright</h4>
+						</div>
+						<div class="card-body px-0">
+							<p>All content, including text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software, that appears on this site is the property of Basetao or its content suppliers and is protected by China and international copyright laws. The compilation of all content on this site is exclusively owned by Basetao and is protected by China and international copyright laws. The software used on this site is the property of Basetao or its software suppliers and is also protected by China and international copyright laws.</p>
+						</div>
+					</div>
+                    <div class="card p-0 bg-transparent">
+						<div class="card-header border-bottom bg-transparent px-0">
+							<h4 class="card-title mb-0">Modifications and severability</h4>
+						</div>
+						<div class="card-body px-0">
+							<p>Basetao reserves the right to modify our site, policies, and these Terms of Use at any time. If any of these terms are considered invalid, void, or unenforceable for any reason, that term will be considered severable and will not affect the validity or enforceability of any remaining conditions.</p>
+						</div>
+					</div>
+                    <div class="card p-0 bg-transparent">
+						<div class="card-header border-bottom bg-transparent px-0">
+							<h4 class="card-title mb-0">Governing law</h4>
+						</div>
+						<div class="card-body px-0">
+							<p>These Terms of Service, as well as any separate agreements for the provision of services, shall be governed by and construed in accordance with the laws of the United Kingdom.</p>
+						</div>
+					</div>                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======================= Main Banner END -->
+
 
 </main>
 <!-- **************** MAIN CONTENT END **************** -->
@@ -389,7 +414,8 @@ Footer START -->
 				<a href="index.html" tppabs="index.html">
 					<img class="h-40px" src="assets/images/logo-light.svg" tppabs="assets/images/logo-light.svg" alt="logo">
 				</a>
-				<p class="my-3 text-muted">Welcome to Basetao company delivering services that combine quality, reliability and compliance!</p>
+				<p class="my-3 mb-5 text-muted">Welcome to Basetao company delivering services that combine quality, reliability and compliance!</p>
+                <h5 class="text-white mb-2">Join us on <li class="list-inline-item"> <a class="btn btn-sm px-2.5 ms-3 bg-facebook mb-0" href="#">Discord <i class="fab fa-fw fa-discord"></i></a> </li></h5>
 			</div>
 			<!-- Widget 1 END -->
 
@@ -400,11 +426,11 @@ Footer START -->
 					<div class="col-12 col-md-3">
 						<h5 class="text-white mb-2 mb-md-4">Policy</h5>
 						<ul class="nav flex-column text-primary-hover">
-							<li class="nav-item"><a class="nav-link text-muted" href="#">After sale service</a></li>
-							<li class="nav-item"><a class="nav-link text-muted" href="#">Storage</a></li>
-							<li class="nav-item"><a class="nav-link text-muted" href="#">Customs & tax</a></li>
-							<li class="nav-item"><a class="nav-link text-muted" href="#">Insurance</a></li>
-                            <li class="nav-item"><a class="nav-link text-muted" href="#">Return</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="after_sale_service.html">After sale service</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="storage.html">Storage</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="customs_tax.html">Customs & tax</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="insurance.html">Insurance</a></li>
+                            <li class="nav-item"><a class="nav-link text-muted" href="return.html">Return</a></li>
 						</ul>
 					</div>
 
@@ -413,7 +439,7 @@ Footer START -->
 						<h5 class="text-white mb-2 mb-md-4">Contact</h5>
 						<ul class="nav flex-column text-primary-hover">
 							<li class="nav-item"><a class="nav-link text-muted" href="#"><i class="bi bi-geo-alt me-2"></i>East lst street JiangXia Guangzhou China, GZ 510420</a></li>
-							<li class="nav-item"><a class="nav-link text-muted" href="#"><i class="bi bi-envelope me-2"></i>basetao2you@vip.163.com</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="mailto:basetao2you@vip.163.com"><i class="bi bi-envelope me-2"></i>basetao2you@vip.163.com</a></li>
 						</ul>
 					</div>
 
@@ -422,9 +448,9 @@ Footer START -->
 						<h5 class="text-white mb-2 mb-md-4">Others</h5>
 						<ul class="nav flex-column text-primary-hover">
 							<li class="nav-item"><a class="nav-link text-muted" href="#"><i class="bi bi-clock me-2"></i>Service times:</a></li>
-							<li class="nav-item"><a class="nav-link text-muted" href="#">9:30 ~ 18:30 Mo-Sa</a></li>
-							<li class="nav-item"><a class="nav-link text-muted" href="#"><i class="fa-solid fa-box me-2"></i>Tracking</a></li>
-                            <li class="nav-item"><a class="nav-link text-muted" href="#"><i class="fa-solid fa-calculator me-2"></i>Cost calculator</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="#"><time id="start-time"></time> ~ <time id="end-time"></time> Mo-Sa</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="https://17track.net/en"><i class="fa-solid fa-box me-2"></i>Tracking</a></li>
+                            <li class="nav-item"><a class="nav-link text-muted" href="cost_calculator.html"><i class="fa-solid fa-calculator me-2"></i>Cost calculator</a></li>
 						</ul>
 					</div>
 				</div>
@@ -432,30 +458,6 @@ Footer START -->
 			<!-- Widget 2 END -->
 
 		</div><!-- Row END -->
-
-
-		<!-- Payment and card -->
-		<div class="row g-4 justify-content-between mt-0 mt-md-2">
-
-			<!-- Payment card -->
-			<div class="col-sm-7 col-md-6 col-lg-4">
-				<h5 class="text-white mb-2">Payment options</h5>
-				<ul class="list-inline mb-0 mt-3">
-					<li class="list-inline-item"> <a href="#"><img src="assets/images/element/paypal.svg" tppabs="assets/images/element/paypal.svg" class="h-30px" alt=""></a></li>
-					<li class="list-inline-item"> <a href="#"><img src="assets/images/element/visa.svg" tppabs="assets/images/element/visa.svg" class="h-30px" alt=""></a></li>
-					<li class="list-inline-item"> <a href="#"><img src="assets/images/element/mastercard.svg" tppabs="assets/images/element/mastercard.svg" class="h-30px" alt=""></a></li>
-					<li class="list-inline-item"> <a href="#"><img src="assets/images/element/expresscard.svg" tppabs="assets/images/element/expresscard.svg" class="h-30px" alt=""></a></li>
-				</ul>
-			</div>
-
-			<!-- Social media icon -->
-			<div class="col-sm-5 col-md-6 col-lg-3 text-sm-end">
-				<h5 class="text-white mb-2">Join us on</h5>
-				<ul class="list-inline mb-0 mt-3">
-					<li class="list-inline-item"> <a class="btn btn-sm px-2 bg-facebook mb-0" href="#"><i class="fab fa-fw fa-discord"></i></a> </li>
-				</ul>	
-			</div>
-		</div>
 
 		<!-- Divider -->
 		<hr class="mt-4 mb-0">
@@ -469,8 +471,8 @@ Footer START -->
 					<!-- copyright links-->
 					<div class="nav mt-2 mt-lg-0">
 						<ul class="list-inline text-primary-hover mx-auto mb-0">
-							<li class="list-inline-item me-0"><a class="nav-link py-1 text-muted" href="#">Privacy policy</a></li>
-							<li class="list-inline-item me-0"><a class="nav-link py-1 text-muted" href="#">Terms and conditions</a></li>
+							<li class="list-inline-item me-0"><a class="nav-link py-1 text-muted" href="privacy_policy.html">Privacy policy</a></li>
+							<li class="list-inline-item me-0"><a class="nav-link py-1 text-muted" href="terms_and_conditions.html">Terms of service</a></li>
 						</ul>
 					</div>
 				</div>
@@ -494,19 +496,20 @@ Footer END -->
 			</a>	
 		</li>
 
-		<!-- Nav item My Trips -->
+		<!-- Nav item Offer -->
 		<li class="nav-item"> 
-			<a class="nav-link" href="account-bookings.html" tppabs="account-bookings.html"><i class="bi bi-briefcase fa-fw"></i>
-				<span class="mb-0 nav-text">My Trips</span>
-			</a>	
+			<a class="nav-link" href="offer-detail.html" tppabs="offer-detail.html"><i class="bi bi-currency-yen fa-fw"></i>
+				<span class="mb-0 nav-text">Top-up</span> 
+			</a>
 		</li>
 
 		<!-- Nav item Offer -->
 		<li class="nav-item"> 
-			<a class="nav-link" href="offer-detail.html" tppabs="offer-detail.html"><i class="bi bi-percent fa-fw"></i>
-				<span class="mb-0 nav-text">Offer</span> 
+			<a class="nav-link" href="offer-detail.html" tppabs="offer-detail.html"><i class="bi bi-box-seam fa-fw"></i>
+				<span class="mb-0 nav-text">Warehouse</span> 
 			</a>
 		</li>
+
 
 		<!-- Nav item Account -->
 		<li class="nav-item"> 
@@ -529,6 +532,13 @@ Footer END -->
 
 <!-- ThemeFunctions -->
 <script src="assets/js/functions.js" tppabs="assets/js/functions.js"></script>
+
+<!-- BasetaoFunctions -->
+<script src="assets/js/timeconvert.js" tppabs="assets/js/timeconvert.js"></script>
+
+<script>
+    
+</script>
 
 </body>
 </html>
