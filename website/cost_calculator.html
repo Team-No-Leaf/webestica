@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Basetao | Homepage</title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Booking - Multipurpose Online Booking Theme">
+	<meta name="keywords" content="taobao, taobao agent,tmall agent,taobao usa, taobao china,taobao english,taobao in english,taobao australian,china online shop,buy from china,agent in china,china agent,purchase agent,buying agent,buy from taobao, import from china" />
+	<meta name="description" content="Taobao english agent basetao.com is your private taobao english online tools with low service fee and low freight. shopping from China online, basetao.net  is a trusted Chinese purchasing agent, which can help global customers buy from Taobao/Tmall/JD. pack and ship to customers from all over the world. FREE SERVICE FEE!! International shipping from China." />
+
+	<!-- Dark mode -->
+	<script>
+		const storedTheme = localStorage.getItem('theme')
+ 
+		const getPreferredTheme = () => {
+			if (storedTheme) {
+				return storedTheme
+			}
+			return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+		}
+
+		const setTheme = function (theme) {
+			if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.documentElement.setAttribute('data-bs-theme', 'dark')
+			} else {
+				document.documentElement.setAttribute('data-bs-theme', theme)
+			}
+		}
+
+		setTheme(getPreferredTheme())
+
+		window.addEventListener('DOMContentLoaded', () => {
+			var el = document.querySelector('.theme-icon-active');
+			if(el != 'undefined' && el != null) {
+				const showActiveTheme = theme => {
+				const activeThemeIcon = document.querySelector('.theme-icon-active use')
+				const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+				const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+
+				document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+					element.classList.remove('active')
+				})
+
+				btnToActive.classList.add('active')
+				activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+			}
+
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+				if (storedTheme !== 'light' || storedTheme !== 'dark') {
+					setTheme(getPreferredTheme())
+				}
+			})
+
+			showActiveTheme(getPreferredTheme())
+
+			document.querySelectorAll('[data-bs-theme-value]')
+				.forEach(toggle => {
+					toggle.addEventListener('click', () => {
+						const theme = toggle.getAttribute('data-bs-theme-value')
+						localStorage.setItem('theme', theme)
+						setTheme(theme)
+						showActiveTheme(theme)
+					})
+				})
+
+			}
+		})
+		
+	</script>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap">
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" tppabs="assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" tppabs="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/tiny-slider/tiny-slider.css" tppabs="assets/vendor/tiny-slider/tiny-slider.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox.css" tppabs="assets/vendor/glightbox/css/glightbox.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/flatpickr/css/flatpickr.min.css" tppabs="assets/vendor/flatpickr/css/flatpickr.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/choices/css/choices.min.css" tppabs="assets/vendor/choices/css/choices.min.css">
+	
+
+	<!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" tppabs="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+
+	<!-- Theme Color CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/color.css" />
+
+
+</head>
+
+<body class="has-navbar-mobile">
+
+	<!-- Header START -->
+	<header class="header-sticky">
+		<!-- Logo Nav START -->
+		<nav class="navbar navbar-light navbar-expand-xl">
+			<div class="container-fluid px-md-5">
+				<!-- Logo START -->
+				<a class="navbar-brand" href="#">
+					<img class="light-mode-item navbar-brand-item" src="assets/images/logo.svg" alt="logo">
+					<img class="dark-mode-item navbar-brand-item" src="assets/images/logo-light.svg" alt="logo">
+				</a>
+				<!-- Logo END -->
+
+				<!-- Responsive navbar toggler -->
+				<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-animation">
+						<span></span>
+						<span></span>
+						<span></span>
+					</span>
+				</button>
+
+				<!-- Main navbar START -->
+				<div class="navbar-collapse collapse" id="navbarCollapse">
+					<ul class="navbar-nav navbar-nav-scroll mx-end">
+						
+						<!-- Nav item -->
+						<li class="nav-item"> <a class="nav-link" href="index-loggedin.html">Homepage</a></li>
+						
+						<!-- Nav item -->
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="pageMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Buy for me</a>
+							<ul class="dropdown-menu" aria-labelledby="pageMenu">
+								<!-- Dropdown submenu -->
+								<li> <a class="dropdown-item" href="buy_works.html">How it works</a></li>
+								<li> <a class="dropdown-item" href="self_help_order.html">Self-help order</a></li>
+							</ul>
+						</li>
+
+						<!-- Nav item -->
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="pageMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ship for me</a>
+							<ul class="dropdown-menu" aria-labelledby="pageMenu">
+								<!-- Dropdown submenu -->
+								<li> <a class="dropdown-item" href="ship_works.html">How it works</a></li>
+								<li> <a class="dropdown-item" href="make_a_parcel.html">Make a parcel</a></li>
+							</ul>
+						</li>
+
+						<!-- Nav item -->
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle active" href="#" id="pageMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help center</a>
+							<ul class="dropdown-menu" aria-labelledby="pageMenu">
+								<!-- Dropdown submenu -->
+								<li> <a class="dropdown-item" href="faq.html">FAQ</a></li>
+								<li> <a class="dropdown-item" href="search_for_me.html">Search for me</a></li>
+								<li> <a class="dropdown-item" href="mail_issue.html">Mail issue</a></li>
+								<li> <a class="dropdown-item active" href="cost_calculator.html">Cost calculator</a></li>
+							</ul>
+						</li>
+						<!-- Nav Search START -->
+							<div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-left">
+								<div class="nav-item w-100 no-border">
+									<form class="position-relative mt-xl-2">
+										<input class="form-control pe-5 bg-secondary bg-opacity-10" type="search" placeholder="Search" aria-label="Search">
+										<button class="btn btn-link bg-transparent px-2 py-0 position-absolute top-50 end-0 translate-middle-y" type="submit"><i class="fas fa-search fs-6 text-primary"></i></button>
+									</form>
+								</div>
+							</div>
+						<!-- Nav Search END -->
+					</ul>
+				</div>
+				<!-- Main navbar END -->
+
+				<!-- Profile and Notification START -->
+				<ul class="nav flex-row align-items-center list-unstyled ms-xl-auto">
+
+					<!-- Shopping cart START -->
+					<li class="nav-item dropdown ms-0 ms-md-3">
+						<a class="nav-notification btn btn-light p-0 mb-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+							<i class="bi bi-cart fa-fw"></i>
+						</a>
+					</li>
+					<!-- Shopping cart END -->
+
+					<!-- Notification dropdown START -->
+					<li class="nav-item dropdown ms-0 ms-md-3">
+						<!-- Notification button -->
+						<a class="nav-notification btn btn-light p-0 mb-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+							<i class="bi bi-bell fa-fw"></i>
+						</a>
+						<!-- Notification dote -->
+						<span class="notif-badge animation-blink"></span>
+
+						<!-- Notification dropdown menu START -->
+						<div class="dropdown-menu dropdown-animation dropdown-menu-end dropdown-menu-size-md shadow-lg p-0">
+							<div class="card bg-transparent">
+								<!-- Card header -->
+								<div class="card-header bg-transparent d-flex justify-content-between align-items-center border-bottom">
+									<h6 class="m-0">Notifications <span class="badge bg-danger bg-opacity-10 text-danger ms-2">4 new</span></h6>
+									<a class="small" href="#">Clear all</a>
+								</div>
+
+								<!-- Card body START -->
+								<div class="card-body p-0">
+									<ul class="list-group list-group-flush list-unstyled p-2">
+										<!-- Notification item -->
+										<li>
+											<a href="#" class="list-group-item list-group-item-action rounded notif-unread border-0 mb-1 p-3">
+												<h6 class="mb-2">Your item has arrived!</h6>
+												<p class="mb-0 small">Item #753048 has arrived at our warehouse.</p>
+											</a>
+										</li>
+										<!-- Notification item -->
+										<li>
+											<a href="#" class="list-group-item list-group-item-action rounded notif-unread border-0 mb-1 p-3">
+												<h6 class="mb-2">New message</h6>
+												<p class="mb-0 small">A new message has been posted at shipment #141363.</p>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<!-- Card body END -->
+
+								<!-- Card footer -->
+								<div class="card-footer bg-transparent text-center border-top">
+									<a href="#" class="btn btn-sm btn-link mb-0 p-0">See all incoming activity</a>
+								</div>
+							</div>
+						</div>
+						<!-- Notification dropdown menu END -->
+					</li>
+					<!-- Notification dropdown END -->
+
+					<!-- Profile dropdown START -->
+					<li class="nav-item ms-3 dropdown">
+						<!-- Avatar -->
+						<a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
+							<img class="avatar-img rounded-2" src="assets/images/avatar/01.jpg" alt="avatar">
+						</a>
+
+						<ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3" aria-labelledby="profileDropdown">
+							<!-- Profile info -->
+							<li class="px-3 mb-3">
+								<div class="d-flex align-items-center">
+									<!-- Avatar -->
+									<div class="avatar me-3">
+										<img class="avatar-img rounded-circle shadow" src="assets/images/avatar/01.jpg" alt="avatar">
+									</div>
+									<div>
+										<a class="h6 mt-2 mt-sm-0" href="#">Kaj</a>
+										<p class="small m-0">basetao@gmail.com</p>
+									</div>
+								</div>
+							</li>
+
+							<!-- Links -->
+							<li> <hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#"><i class="bi bi-person-fill fa-fw me-2"></i>My account</a></li>
+							<li><a class="dropdown-item" href="#"><i class="bi bi-currency-yen fa-fw me-2"></i>Top-up</a></li>
+							<li><a class="dropdown-item bg-danger-soft-hover" href="index.html"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
+							<li> <hr class="dropdown-divider"></li>
+
+							<!-- Dark mode options START -->
+							<li>
+								<div class="nav-pills-primary-soft theme-icon-active d-flex justify-content-between align-items-center p-2 pb-0">
+									<span>Mode:</span>
+									<button type="button" class="btn btn-link nav-link text-primary-hover mb-0 p-0" data-bs-theme-value="light" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Light">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun fa-fw mode-switch" viewBox="0 0 16 16">
+											<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+											<use href="#"></use>
+										</svg>
+									</button>
+									<button type="button" class="btn btn-link nav-link text-primary-hover mb-0 p-0" data-bs-theme-value="dark" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Dark">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars fa-fw mode-switch" viewBox="0 0 16 16">
+											<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+											<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+											<use href="#"></use>
+										</svg>
+									</button>
+									<button type="button" class="btn btn-link nav-link text-primary-hover mb-0 p-0 active" data-bs-theme-value="auto" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Auto">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half fa-fw mode-switch" viewBox="0 0 16 16">
+											<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+											<use href="#"></use>
+										</svg>
+									</button>
+								</div>
+							</li> 
+							<!-- Dark mode options END-->
+						</ul>
+					</li>
+					<!-- Profile dropdown END -->
+				</ul>
+				<!-- Profile and Notification START -->
+
+			</div>
+		</nav>
+		<!-- Logo Nav END -->
+	</header>
+	<!-- Header END -->
+
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+
+	<!-- ======================= Main Banner START -->
+	<section class="bg-light">
+		<div class="container">
+			<div class="row g-4 justify-content-md-center mt-md-n7 mb-md-n5 text-center">
+				<div class="col-md-4 mt-lg-4 pt-lg-5 text-center text-lg-end">
+					<h1>Cost calculator</h1>
+				</div>
+				<div class="col-md-4 mt-lg-4 d-none d-lg-block text-start">
+					<img src="assets/images/element/calculator.svg" style="max-width: 250px;">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="mt-n4">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 order-2 order-lg-1 mb-4">
+					<div class="card bg-light p-4">
+						<figure class="position-absolute end-0 bottom-0 mb-n4 me-n2">
+							<svg class="fill-orange" width="104.2px" height="95.2px">
+								<circle cx="2.6" cy="92.6" r="2.6"></circle>
+								<circle cx="2.6" cy="77.6" r="2.6"></circle>
+								<circle cx="2.6" cy="62.6" r="2.6"></circle>
+								<circle cx="2.6" cy="47.6" r="2.6"></circle>
+								<circle cx="2.6" cy="32.6" r="2.6"></circle>
+								<circle cx="2.6" cy="17.6" r="2.6"></circle>
+								<circle cx="2.6" cy="2.6" r="2.6"></circle>
+								<circle cx="22.4" cy="92.6" r="2.6"></circle>
+								<circle cx="22.4" cy="77.6" r="2.6"></circle>
+								<circle cx="22.4" cy="62.6" r="2.6"></circle>
+								<circle cx="22.4" cy="47.6" r="2.6"></circle>
+								<circle cx="22.4" cy="32.6" r="2.6"></circle>
+								<circle cx="22.4" cy="17.6" r="2.6"></circle>
+								<circle cx="22.4" cy="2.6" r="2.6"></circle>
+								<circle cx="42.2" cy="92.6" r="2.6"></circle>
+								<circle cx="42.2" cy="77.6" r="2.6"></circle>
+								<circle cx="42.2" cy="62.6" r="2.6"></circle>
+								<circle cx="42.2" cy="47.6" r="2.6"></circle>
+								<circle cx="42.2" cy="32.6" r="2.6"></circle>
+								<circle cx="42.2" cy="17.6" r="2.6"></circle>
+								<circle cx="42.2" cy="2.6" r="2.6"></circle>
+								<circle cx="62" cy="92.6" r="2.6"></circle>
+								<circle cx="62" cy="77.6" r="2.6"></circle>
+								<circle cx="62" cy="62.6" r="2.6"></circle>
+								<circle cx="62" cy="47.6" r="2.6"></circle>
+								<circle cx="62" cy="32.6" r="2.6"></circle>
+								<circle cx="62" cy="17.6" r="2.6"></circle>
+								<circle cx="62" cy="2.6" r="2.6"></circle>
+								<circle cx="81.8" cy="92.6" r="2.6"></circle>
+								<circle cx="81.8" cy="77.6" r="2.6"></circle>
+								<circle cx="81.8" cy="62.6" r="2.6"></circle>
+								<circle cx="81.8" cy="47.6" r="2.6"></circle>
+								<circle cx="81.8" cy="32.6" r="2.6"></circle>
+								<circle cx="81.8" cy="17.6" r="2.6"></circle>
+								<circle cx="81.8" cy="2.6" r="2.6"></circle>
+								<circle cx="101.7" cy="92.6" r="2.6"></circle>
+								<circle cx="101.7" cy="77.6" r="2.6"></circle>
+								<circle cx="101.7" cy="62.6" r="2.6"></circle>
+								<circle cx="101.7" cy="47.6" r="2.6"></circle>
+								<circle cx="101.7" cy="32.6" r="2.6"></circle>
+								<circle cx="101.7" cy="17.6" r="2.6"></circle>
+								<circle cx="101.7" cy="2.6" r="2.6"></circle>
+							</svg>
+						</figure>
+						<div class="card-body p-0">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="calculator" id="buyforme" checked>
+								<label class="form-check-label" for="buyforme">Buy for me</label>
+							</div>
+							<div class="form-check form-check-inline mb-3">
+								<input class="form-check-input" type="radio" name="calculator" id="shipforme">
+								<label class="form-check-label" for="shipforme">Ship for me</label>
+							</div>
+							<form class="form-inline">
+								<div class="form-floating mb-3">
+									<input type="text" class="form-control" id="itemprice" placeholder="100">
+									<label for="itemprice">The total cost of items (CNY)</label>
+								</div>
+								<div class="form-floating mb-3">
+									<input type="text" class="form-control" id="itemprice" placeholder="100">
+									<label for="itemprice">Items total weight (gram)</label>
+								</div>
+								<div class="form-floating mb-3">
+									<select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+										<option selected>Open this select menu</option>
+										<option   value="5">Afghanistan</option>
+										<option   value="6">Albania</option>
+										<option   value="7">Algeria</option>
+										<option   value="8">Andorra</option>
+										<option   value="9">Angola</option>
+										<option   value="10">Antigua and Barbuda </option>
+										<option   value="11">Argentina</option>
+										<option   value="12">Armenia</option>
+										<option   value="219">Aruba</option>
+										<option   value="13">Australia</option>
+										<option   value="14">Austria</option>
+										<option   value="15">Azerbaijan</option>
+										<option   value="16">Bahamas</option>
+										<option   value="17">Bahrain</option>
+										<option   value="18">Bangladesh</option>
+										<option   value="20">Barbados</option>
+										<option   value="19">Belarus</option>
+										<option   value="21">Belgium</option>
+										<option   value="22">Belize</option>
+										<option   value="25">Benin</option>
+										<option   value="209">Bermuda</option>
+										<option   value="24">Bhutan</option>
+										<option   value="26">Bolivia</option>
+										<option   value="27">Bosnia and Herzegovina </option>
+										<option   value="28">Botswana</option>
+										<option   value="29">Brazil</option>
+										<option   value="30">Brunei</option>
+										<option   value="31">Bulgaria</option>
+										<option   value="32">Burkina Faso </option>
+										<option   value="33">Burundi</option>
+										<option   value="34">Cambodia</option>
+										<option   value="35">Cameroon</option>
+										<option   value="36">Canada</option>
+										<option   value="37">Cape Verde</option>
+										<option   value="225">Cayman Islands</option>
+										<option   value="38">Central African Republ</option>
+										<option   value="39">Chad</option>
+										<option   value="40">Chile</option>
+										<option   value="41">China</option>
+										<option   value="42">Colombia</option>
+										<option   value="43">Comoros</option>
+										<option   value="44">Congo Brazzaville</option>
+										<option   value="45">Congo, Democratic Republic of the Congo</option>
+										<option   value="46">Costa Rica </option>
+										<option   value="48">Côte d&#039;Ivoire</option>
+										<option   value="218">Cote d&#039;Ivoire</option>
+										<option   value="47">Croatia</option>
+										<option   value="49">Cuba</option>
+										<option   value="221">Curacao</option>
+										<option   value="50">Cyprus</option>
+										<option   value="51">Czech Republic</option>
+										<option   value="52">Denmark</option>
+										<option   value="53">Djibouti</option>
+										<option   value="54">Dominica</option>
+										<option   value="55">Dominican Republic</option>
+										<option   value="226">Dubai-United Arab Emirate</option>
+										<option   value="56">East Timor Timor Timur </option>
+										<option   value="57">Ecuador</option>
+										<option   value="58">Egypt</option>
+										<option   value="59">El Salvador </option>
+										<option   value="60">Equatorial Guinea </option>
+										<option   value="61">Eritrea</option>
+										<option   value="62">Estonia</option>
+										<option   value="63">Ethiopia</option>
+										<option   value="64">Fiji</option>
+										<option   value="65">Finland</option>
+										<option   value="66">France</option>
+										<option   value="67">Gabon</option>
+										<option   value="68">Gambia, The </option>
+										<option   value="69">georgia</option>
+										<option   value="70">Germany</option>
+										<option   value="71">Ghana</option>
+										<option   value="214">Gibraltar</option>
+										<option   value="72">Greece</option>
+										<option   value="222">Greenland</option>
+										<option   value="73">Grenada </option>
+										<option   value="211">Guadeloupe</option>
+										<option   value="210">Guam</option>
+										<option   value="74">Guatemala </option>
+										<option   value="75">Guinea</option>
+										<option   value="76">Guinea-Bissau</option>
+										<option   value="77">Guyana</option>
+										<option   value="220">Guyane Francaise</option>
+										<option   value="78">Haiti</option>
+										<option   value="79">Honduras</option>
+										<option   value="212">Hong Kong-China</option>
+										<option   value="80">Hungary</option>
+										<option   value="81">Iceland</option>
+										<option   value="82">India</option>
+										<option   value="83">Indonesia</option>
+										<option   value="84">Iran</option>
+										<option   value="85">Iraq</option>
+										<option   value="86">Ireland</option>
+										<option   value="87">Israel</option>
+										<option   value="88">Italy</option>
+										<option   value="89">Jamaica</option>
+										<option   value="90">japan</option>
+										<option   value="91">Jordan</option>
+										<option   value="92">Kazakhstan </option>
+										<option   value="93">Kenya</option>
+										<option   value="94">Kiribati</option>
+										<option   value="217">Kosovo</option>
+										<option   value="97">Kuwait</option>
+										<option   value="204">Kyrgyzstan</option>
+										<option   value="98">Laos</option>
+										<option   value="99">Latvia</option>
+										<option   value="100">Lebanon</option>
+										<option   value="101">Lesotho</option>
+										<option   value="102">Liberia</option>
+										<option   value="103">Libya</option>
+										<option   value="104">Liechtenstein</option>
+										<option   value="105">Lithuania</option>
+										<option   value="106">luxembourg</option>
+										<option   value="107">Madagascar</option>
+										<option   value="108">Malawi</option>
+										<option   value="109">Malaysia</option>
+										<option   value="112">Maldives</option>
+										<option   value="110">Mali</option>
+										<option   value="224">Malta</option>
+										<option   value="113">Marshall Islands </option>
+										<option   value="213">martinique</option>
+										<option   value="116">Mauritania</option>
+										<option   value="114">Mauritius</option>
+										<option   value="223">Mayotte</option>
+										<option   value="115">Mexico</option>
+										<option   value="118">Micronesia, Federated States of </option>
+										<option   value="121">Moldova</option>
+										<option   value="117">monaco</option>
+										<option   value="119">Mongolia</option>
+										<option   value="123">Montenegro</option>
+										<option   value="120">Morocco</option>
+										<option   value="122">Mozambique</option>
+										<option   value="124">Myanmar Burma</option>
+										<option   value="125">Namibia</option>
+										<option   value="126">Nauru</option>
+										<option   value="197">Nepal</option>
+										<option   value="127">Netherlands</option>
+										<option   value="216">New Caledonia</option>
+										<option   value="128">New Zealand </option>
+										<option   value="130">Nicaragua</option>
+										<option   value="132">Niger</option>
+										<option   value="129">Nigeria</option>
+										<option   value="95">North Korea</option>
+										<option   value="131">Norway</option>
+										<option   value="201">Oman</option>
+										<option   value="135">Pakistan</option>
+										<option   value="133">Palau </option>
+										<option   value="136">Panama</option>
+										<option   value="134">Papua New Guinea </option>
+										<option   value="137">Paraguay</option>
+										<option   value="138">Peru</option>
+										<option   value="139">Philippines</option>
+										<option   value="140">Poland</option>
+										<option   value="141">Portugal</option>
+										<option   value="207">Puerto Rico</option>
+										<option   value="142">Qatar</option>
+										<option   value="143">Republic of Macedonia </option>
+										<option   value="208">Reunion</option>
+										<option   value="144">Romania</option>
+										<option   value="145">Russia</option>
+										<option   value="146">Rwanda</option>
+										<option   value="147">Saint Kitts and Nevis </option>
+										<option   value="148">Saint Lucia </option>
+										<option   value="151">Saint Vincent and The Grenadines </option>
+										<option   value="149">Samoa</option>
+										<option   value="153">San Marino </option>
+										<option   value="154">Sao Tome and Principe </option>
+										<option   value="155">Saudi Arabia</option>
+										<option   value="150">Senegal</option>
+										<option   value="152">Serbia</option>
+										<option   value="157">Seychelles</option>
+										<option   value="159">Sierra Leone </option>
+										<option   value="156">Singapore</option>
+										<option   value="158">Slovakia</option>
+										<option   value="160">Slovenia</option>
+										<option   value="161">Solomon Islands </option>
+										<option   value="162">Somalia</option>
+										<option   value="96">South  Korea</option>
+										<option   value="163">South Africa </option>
+										<option   value="164">Spain</option>
+										<option   value="165">Sri Lanka </option>
+										<option   value="167">Sudan</option>
+										<option   value="166">Suriname</option>
+										<option   value="168">Swaziland</option>
+										<option   value="169">Sweden</option>
+										<option   value="171">Switzerland</option>
+										<option   value="172">Syria</option>
+										<option   value="174">Taiwan</option>
+										<option   value="173">Tajikistan</option>
+										<option   value="176">Tanzania</option>
+										<option   value="177">Thailand</option>
+										<option   value="179">Togo</option>
+										<option   value="175">Tonga</option>
+										<option   value="178">Trinidad and Tobago </option>
+										<option   value="182">Turkey </option>
+										<option   value="180">Turkmenistan </option>
+										<option   value="183">Tuvalu </option>
+										<option   value="181">Uganda</option>
+										<option   value="199">Ukraine</option>
+										<option   value="185">United Arab Emirates </option>
+										<option   value="202">United Kingdom</option>
+										<option   value="187">United States</option>
+										<option   value="189">Uruguay</option>
+										<option   value="188">Uzbekistan</option>
+										<option   value="186">Vanuatu</option>
+										<option   value="190">Vatican City </option>
+										<option   value="191">Venezuela</option>
+										<option   value="205">venezuela</option>
+										<option   value="192">Vietnam</option>
+										<option   value="200">Wallis and Futuna </option>
+										<option   value="193">Western Sahara </option>
+										<option   value="194">Yemen</option>
+										<option   value="195">Zambia</option>
+										<option   value="196">Zimbabwe</option>
+									</select>
+									<label for="floatingSelect">Delivery country</label>
+								</div>
+                                <a href="#" type="submit" class="btn btn-primary w-100 mb-0">Calculate</a>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 order-1 order-lg-2 mb-4">
+					<div class="card bg-light p-4">
+                        <div class="card-header bg-light p-0 pb-3">
+                            <h4 class="mb-0">Volumetric weight</h4>
+                        </div>
+                        <div class="card-body p-0">
+                            <p>If the volumetric weight of a shipment exceeds the actual weight, it may impact the cost of shipping. This is also known as dimensional weight.</p>
+                            <p>To calculate dimensional weight, multiply the length (in centimeters) by the width (in centimeters) by the height (in centimeters), and then divide the result by 5000. This will give you the dimensional weight in kilograms. Most express couriers, such as DHL, FedEx, and Aramex, use the greater of the actual weight or the dimensional weight when determining shipping costs.</p>
+                            <p class="text-danger mb-0">It is recommended that you avoid using DHL, FedEx, or Aramex to ship parcels with large-sized items.</p>
+                        </div>
+					</div>
+				</div>
+                <div class="col-12 order-3">
+                    <div class="card bg-light p-4">
+                        <div class="table-responsive border-0">
+                            <table class="table align-middle p-4 mb-0 table-hover table-shrink">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th scope="col" class="border-0 rounded-start">Shipping way</th>
+                                        <th scope="col" class="border-0">Item price (¥)</th>
+                                        <th scope="col" class="border-0">Service fee (¥)</th>
+                                        <th scope="col" class="border-0">Custom fee (¥)</th>
+                                        <th scope="col" class="border-0">Shipping fee (¥)</th>
+                                        <th scope="col" class="border-0">Total fee (¥)</th>
+                                        <th scope="col" class="border-0">Total fee (¥)</th>
+                                        <th scope="col" class="border-0 rounded-end">Info</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="border-top-0">
+                                    <tr>
+                                        <td class="border-0"><h6 class="mb-0"><a href="#">HK-DHL</a></h6></td>
+                                        <td class="border-0">0</td>
+                                        <td class="border-0">0</td>
+                                        <td class="border-0">0</td>
+                                        <td class="border-0">220</td>
+                                        <td class="border-0">220</td>
+                                        <td class="border-0">34,80</td>
+                                        <td class="border-0">
+                                            <a type="button" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="The estimated delivery time is between 12-25 days, and we do not accept any branded items. Please note that we calculate the shipping fee based on the bigger of the Volume Weight (length x width x height in cm / 5000) or Physical Weight.">
+                                                <i class="bi bi-info-circle-fill"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</section>
+	<!-- ======================= Main Banner END -->
+
+
+</main>
+<!-- **************** MAIN CONTENT END **************** -->
+
+<!-- =======================
+Footer START -->
+<footer class="bg-dark pt-5">
+	<div class="container">
+		<!-- Row START -->
+		<div class="row g-4">
+
+			<!-- Widget 1 START -->
+			<div class="col-lg-3">
+				<!-- logo -->
+				<a href="index.html" tppabs="index.html">
+					<img class="h-40px" src="assets/images/logo-light.svg" tppabs="assets/images/logo-light.svg" alt="logo">
+				</a>
+				<p class="my-3 mb-5 text-muted">Welcome to Basetao company delivering services that combine quality, reliability and compliance!</p>
+				<h5 class="text-white mb-2">Join us on <li class="list-inline-item"> <a class="btn btn-sm px-2.5 ms-3 bg-facebook mb-0" href="#">Discord <i class="fab fa-fw fa-discord"></i></a> </li></h5>
+			</div>
+			<!-- Widget 1 END -->
+
+			<!-- Widget 2 START -->
+			<div class="col-lg-8 ms-auto">
+				<div class="row g-2">
+					<!-- Link block -->
+					<div class="col-12 col-md-3">
+						<h5 class="text-white mb-2 mb-md-4">Policy</h5>
+						<ul class="nav flex-column text-primary-hover">
+							<li class="nav-item"><a class="nav-link text-muted" href="after_sale_service.html">After sale service</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="storage.html">Storage</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="customs_tax.html">Customs & tax</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="insurance.html">Insurance</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="return.html">Return</a></li>
+						</ul>
+					</div>
+
+					<!-- Link block -->
+					<div class="col-12 col-md-5">
+						<h5 class="text-white mb-2 mb-md-4">Contact</h5>
+						<ul class="nav flex-column text-primary-hover">
+							<li class="nav-item"><a class="nav-link text-muted" href="#"><i class="bi bi-geo-alt me-2"></i>East lst street JiangXia Guangzhou China, GZ 510420</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="mailto:basetao2you@vip.163.com"><i class="bi bi-envelope me-2"></i>basetao2you@vip.163.com</a></li>
+						</ul>
+					</div>
+
+					<!-- Link block -->
+					<div class="col-12 col-md-4">
+						<h5 class="text-white mb-2 mb-md-4">Others</h5>
+						<ul class="nav flex-column text-primary-hover">
+							<li class="nav-item"><a class="nav-link text-muted" href="#"><i class="bi bi-clock me-2"></i>Service times:</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="#"><time id="start-time"></time> ~ <time id="end-time"></time> Mo-Sa</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="https://17track.net/en"><i class="fa-solid fa-box me-2"></i>Tracking</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="cost_calculator.html"><i class="fa-solid fa-calculator me-2"></i>Cost calculator</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Widget 2 END -->
+
+		</div><!-- Row END -->
+
+		<!-- Divider -->
+		<hr class="mt-4 mb-0">
+
+		<!-- Bottom footer -->
+		<div class="row">
+			<div class="container">
+				<div class="d-lg-flex justify-content-between align-items-center py-3 text-center text-lg-start">
+					<!-- copyright text -->
+					<div class="text-muted text-primary-hover"> Copyrights ©2023 Basetao. Build with <i style="color:red" class="bi bi-heart-fill"></i> by Kaj. </div>
+					<!-- copyright links-->
+					<div class="nav mt-2 mt-lg-0">
+						<ul class="list-inline text-primary-hover mx-auto mb-0">
+							<li class="list-inline-item me-0"><a class="nav-link py-1 text-muted" href="privacy_policy.html">Privacy policy</a></li>
+							<li class="list-inline-item me-0"><a class="nav-link py-1 text-muted" href="terms_and_conditions.html">Terms of service</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- =======================
+Footer END -->
+
+<!-- Back to top -->
+<div class="back-top"></div>
+
+<!-- Navbar mobile START -->
+<div class="navbar navbar-mobile">
+	<ul class="navbar-nav">
+		<!-- Nav item Home -->
+		<li class="nav-item">
+			<a class="nav-link active" href="index.html" tppabs="index.html"><i class="bi bi-house-door fa-fw"></i>
+				<span class="mb-0 nav-text">Home</span>
+			</a>	
+		</li>
+
+		<!-- Nav item Offer -->
+		<li class="nav-item"> 
+			<a class="nav-link" href="offer-detail.html" tppabs="offer-detail.html"><i class="bi bi-currency-yen fa-fw"></i>
+				<span class="mb-0 nav-text">Top-up</span> 
+			</a>
+		</li>
+
+		<!-- Nav item Offer -->
+		<li class="nav-item"> 
+			<a class="nav-link" href="offer-detail.html" tppabs="offer-detail.html"><i class="bi bi-box-seam fa-fw"></i>
+				<span class="mb-0 nav-text">Warehouse</span> 
+			</a>
+		</li>
+
+
+		<!-- Nav item Account -->
+		<li class="nav-item"> 
+			<a class="nav-link" href="account-profile.html" tppabs="account-profile.html"><i class="bi bi-person-circle fa-fw"></i>
+				<span class="mb-0 nav-text">Account</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<!-- Navbar mobile END -->
+
+<!-- Bootstrap JS -->
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js" tppabs="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Vendors -->
+<script src="assets/vendor/tiny-slider/tiny-slider.js" tppabs="assets/vendor/tiny-slider/tiny-slider.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.js" tppabs="assets/vendor/glightbox/js/glightbox.js"></script>
+<script src="assets/vendor/flatpickr/js/flatpickr.min.js" tppabs="assets/vendor/flatpickr/js/flatpickr.min.js"></script>
+<script src="assets/vendor/choices/js/choices.min.js" tppabs="assets/vendor/choices/js/choices.min.js"></script>
+
+<!-- ThemeFunctions -->
+<script src="assets/js/functions.js" tppabs="assets/js/functions.js"></script>
+
+<!-- BasetaoFunctions -->
+<script src="assets/js/timeconvert.js" tppabs="assets/js/timeconvert.js"></script>
+
+<script>
+	
+</script>
+
+</body>
+</html>
