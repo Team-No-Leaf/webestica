@@ -8,6 +8,9 @@
 .no-border {
     border-bottom: none !important;
 }
+.nav-pills-primary-soft .nav-link {
+    padding: 0.2rem 0.8rem !important;
+}
 
 
 /* Min/max width */
@@ -124,6 +127,9 @@
 }
 .end-20 {
     right: 20% !important;
+}
+.end-25 {
+    right: 25% !important;
 }
 .end-30 {
     right: 30% !important;
