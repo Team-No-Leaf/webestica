@@ -10,8 +10,41 @@
 }
 
 
+/* Min/max width */
+.mi-w-50 {
+    min-width: 50px;
+}
+.mi-w-75 {
+    min-width: 75px;
+}
+.mi-w-100 {
+    min-width: 100px;
+}
+.mi-w-150 {
+    min-width: 150px;
+}
+.mi-w-200 {
+    min-width: 200px;
+}
 
-
+.ma-w-75 {
+    max-width: 75px;
+}
+.ma-w-100 {
+    max-width: 100px;
+}
+.ma-w-150 {
+    max-width: 150px;
+}
+.ma-w-200 {
+    max-width: 200px;
+}
+.ma-w-250 {
+    max-width: 250px;
+}
+.ma-w-300 {
+    max-width: 300px;
+}
 
 /* Adding top-bottom-start-end */
 .top-10 {
