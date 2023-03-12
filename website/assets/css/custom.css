@@ -13,7 +13,7 @@
 }
 
 
-/* Min/max width */
+/* Min/max width/height */
 .mi-w-50 {
     min-width: 50px;
 }
@@ -47,6 +47,10 @@
 }
 .ma-w-300 {
     max-width: 300px;
+}
+
+.ma-h-25 {
+    max-height: 25px;
 }
 
 /* Adding top-bottom-start-end */
