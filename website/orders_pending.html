@@ -316,11 +316,11 @@
                                 <div class="card-body p-3">
                                     <ul class="nav nav-pills-primary-soft flex-column">
                                         <li class="nav-item mb-3">
-                                            <a class="nav-link active text-orange bg-orange-soft-hover" href="account.html"><small><i class="bi bi-person-circle me-2"></i>Account</small></a>
+                                            <a class="nav-link text-orange bg-orange-soft-hover" href="account.html"><small><i class="bi bi-person-circle me-2"></i>Account</small></a>
                                         </li>
                                         <h6>Orders</h3>
                                         <li class="nav-item nav-item-sm">
-                                            <a class="nav-link position-relative" href="orders_pending.html">
+                                            <a class="nav-link position-relative active" href="orders_pending.html">
                                                 <small>Pending</small>
                                                 <span class="position-absolute top-50 start-90 translate-middle badge rounded-pill bg-secondary">
                                                     <small>8</small>
@@ -418,131 +418,91 @@
                         </button>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 mb-4 pt-sm-4 text-center">
-                            <h4>Welcome back Kaj!</h4>
-                            <h5>Join us on <li class="list-inline-item"> <a class="btn btn-sm px-2.5 ms-3 bg-facebook mb-0" href="#">Discord <i class="fab fa-fw fa-discord"></i></a> </li></h5>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="bg-orange p-4 rounded-3">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <img width="80px" src="assets/images/element/payments/bt-grey.svg" alt="">
-                                        <h4 class="text-white mt-2"><i class="bi bi-currency-yen fa-fw me-2"></i> 2050</h4>
-                                        <!-- Card action START -->
-                                        <div class="dropdown">
-                                            <a class="text-white" href="#" id="creditcardDropdown2" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                                                <!-- Dropdown Icon -->
-                                                <svg width="24" height="24" fill="none">
-                                                    <circle fill="currentColor" cx="12.5" cy="3.5" r="2.5"></circle>
-                                                    <circle fill="currentColor" opacity="0.5" cx="12.5" cy="11.5" r="2.5"></circle>
-                                                    <circle fill="currentColor" opacity="0.3" cx="12.5" cy="19.5" r="2.5"></circle>
-                                                </svg>
-                                            </a>               
-                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="creditcardDropdown2" style="">
-                                                <li><a class="dropdown-item" href="top-up.html"><i class="bi bi-currency-yen fa-fw me-2"></i>Top-up</a></li>
-                                            </ul>
-                                        </div>
-                                        <!-- Card action END -->
-                                    </div>
-                                    
-                                </div>
-                            </div>
+                        <div class="col-md-12 mb-4 pt-sm-4 ps-5">
+                            <h4>Pending orders</h4>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12 mb-4">
                             <div class="bg-light rounded p-3">
-                                <!-- Progress bar -->
-                                <div class=" position-relative">
-                                    <div class="row">
-                                        <div class="col-7">
-                                            <h6 class="mb-3">Basetao VIP status</h6>
-                                        </div>
-                                        <div class="col-5 text-end">
-                                            <a href="#" class="mb-3">Learn more <i class="fa-solid fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="position-absolute top-90 translate-middle badge rounded-pill bg-secondary z-1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" data-bs-title="Points needed: 200<br>Service fee: 5%">
-                                        <small>V0</small>
-                                    </span>
-                                    <span class="position-absolute top-90 start-20 translate-middle badge rounded-pill bg-secondary z-1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" data-bs-title="Points needed: 5000<br>Service fee: 4%">
-                                        <small>V1</small>
-                                    </span>
-                                    <span class="position-absolute top-90 start-40 translate-middle badge rounded-pill bg-secondary z-1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" data-bs-title="Points needed: 25000<br>Service fee: 3%">
-                                        <small>V2</small>
-                                    </span>
-                                    <span class="position-absolute top-90 start-60 translate-middle badge rounded-pill bg-secondary z-1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" data-bs-title="Points needed: 45000<br>Service fee: 2%">
-                                        <small>V3</small>
-                                    </span>
-                                    <span class="position-absolute top-90 start-80 translate-middle badge rounded-pill bg-orange z-1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" data-bs-title="Points needed: 65000<br>Service fee: 1%">
-                                        <small>V4</small>
-                                    </span>
-                                    <span class="position-absolute top-90 start-100 translate-middle badge rounded-pill bg-secondary z-1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" data-bs-title="Points needed: 85000<br>Service fee: 0%">
-                                        <small>V5</small>
-                                    </span>
-                                    <div class="progress progress-sm bg-success bg-opacity-10 mb-1">
-                                        <div class="progress-bar bg-success aos aos-init aos-animate" role="progressbar" data-aos="slide-right" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="card card-body bg-light">
-                                <h5 class="card-header-title mb-3">Orders with a message</h5>
-                                <p class="mb-0">
-                                    <a href="#" class="btn btn-sm btn-primary-soft">#141363</a>
-                                    <a href="#" class="btn btn-sm btn-primary-soft">#141363</a>
-                                    <a href="#" class="btn btn-sm btn-primary-soft">#141363</a>
-                                    <a href="#" class="btn btn-sm btn-primary-soft">#141363</a>
-                                    
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="card card-body bg-light">
-                                <h5 class="card-header-title mb-3">Parcels with a message</h5>
-                                <p class="mb-0">There are no parcels with a message.</p>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="bg-light rounded-3 position-relative overflow-hidden p-4 p-sm-5">	
-                                <figure class="position-absolute top-0 end-0 mt-6 d-none d-sm-block">
-                                    <svg class="fill-primary" width="141px" height="23.9px" viewBox="0 0 141 23.9">
-                                        <polygon points="1.8,14.1 21.5,23.9 41.4,14 61.3,23.9 81.2,14 101.1,23.9 121,14 139,23 139,20.2 121,11.2 101.1,21.1 81.2,11.2 61.3,21.1 41.4,11.2 21.5,21.1 1.8,11.4 "></polygon>
-                                        <polygon points="1.8,2.9 21.5,12.7 41.4,2.8 61.3,12.7 81.2,2.8 101.1,12.7 121,2.8 139,11.7 139,9 121,0 101.1,9.9 81.2,0 61.3,9.9 41.4,0 21.5,9.9 1.8,0.1"></polygon>
-                                    </svg>
-                                </figure>
-                                <div class="row g-4 justify-content-md-between align-items-center position-relative">
-                                    <h4 class="mb-4">News articles</h4>
-                                </div> 
-                                <div class="card card-body h-100 p-3 mb-4">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="d-flex align-items-center">
-                                            <img src="assets/images/category/hotel/nearby/02.jpg" class="h-70px rounded-2" alt="">
-                
-                                            <div class="ms-3">
-                                                <h5 class="mb-0"><a href="#">Spring Festival Holidays</a></h5>
-                                                <span>from January 15th to January 28th</span>
-                                            </div>
-                                        </div>
-                                        <!-- Button -->
-                                        <a href="#" class="btn btn-primary-soft btn-round flex-shrink-0 ms-2 mb-0" data-bs-toggle="modal" data-bs-target="#news1Modal"><i class="bi bi-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                                <div class="card card-body h-100 p-3">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="d-flex align-items-center">
-                                            <img src="assets/images/category/hotel/nearby/13.jpg" class="h-70px rounded-2" alt="">
-                
-                                            <div class="ms-3">
-                                                <h5 class="mb-0"><a href="#">New Year's Day</a></h5>
-                                                <span>from December 31th to January 2nd</span>
-                                            </div>
-                                        </div>
-                                        <!-- Button -->
-                                        <a href="#" class="btn btn-primary-soft btn-round flex-shrink-0 ms-2 mb-0" data-bs-toggle="modal" data-bs-target="#news2Modal"><i class="bi bi-arrow-right"></i></a>
-                                    </div>
+                                <div class="table-responsive card border-0">
+                                    <table class="table align-middle p-4 mb-0 table-shrink">
+                                        <thead class="table-light text-center">
+                                            <tr>
+                                                <th width="10%" colspan="2">Item</th>
+                                                <th width="10%">Price</th>
+                                                <th width="8%">Freight</th>
+                                                <th width="7%">Total</th>
+                                                <th width="5%">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="mb-0 small rounded-3">
+                                            <tr>
+                                                <td class="border-bottom-0 pt-1 pb-1" colspan="6">
+                                                    <span class="badge bg-secondary me-2"><b>ID:</b> 756738</span> <span class="float-end small"><b>Order date:</b> 2023-03-14 02:49:00</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="pt-1 pb-1">
+                                                    <a target="_blank" href="https://shop340050358.v.weidian.com/item.html?itemID=4905916245">
+                                                        <img class="mi-w-75 ma-w-75 rounded" src="https://si.geilicdn.com/wdseller901647923430-015d00000183fd1734400a22d30f_1024_1024.jpg.webp?w=800&h=800&cp=1" onerror="this.onerror='';this.src='https://www.basetao.com/style/index/images/default.gif'">
+                                                    </a>
+                                                </td>
+                                                <td class="pt-0">
+                                                    <p class="mb-0">
+                                                        <a target="_blank" class="d-inline-block ma-w-300 text-truncate text-orange" href="https://shop340050358.v.weidian.com/item.html?itemID=4905916245">
+                                                            耐克 Drake x Nike Air Force 1 Low Certified Lover Boy NOCTA 空军一号 复古 透气 休闲板鞋 低帮 运动鞋 男女同款 白色 CZ8065-100
+                                                        </a>
+                                                    </p>
+                                                    <p class="mb-0"><b>Remove packaging:</b>&nbsp;Yes</p>
+                                                    <p class="mb-0"><b>Color:</b>&nbsp;white <b>Size:</b>&nbsp;43</p>
+                                                </td>
+                                                <td class="text-center">¥<span class="text-orange">270</span>&nbsp;*&nbsp;1</td>
+                                                <td class="text-center">¥<span class="text-orange">9</span></td>
+                                                <td class="text-center">¥<span class="text-orange">279</span></td>
+                                                <td>
+                                                    <p class="mb-0 text-center">
+                                                        <a href="#" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Messages"><i class="bi bi-chat-fill text-success"></i></a>
+                                                    </p>
+                                                    <p class="mb-0 text-center">
+                                                        <a type="button" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Cancel"><i class="bi bi-trash-fill text-danger"></i></a>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="border-bottom-0 pt-1 pb-1" colspan="6">
+                                                    <span class="badge bg-secondary me-2"><b>ID:</b> 756738</span> <span class="float-end small"><b>Order date:</b> 2023-03-14 02:49:00</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="pt-1 pb-1 border-bottom-0">
+                                                    <a target="_blank" href="https://detail.1688.com/offer/669072322900.html?spm=a262uh.11734178.favorite-offers-offer-list-offer4.2.4ba72ef655x8WV">
+                                                        <img class="mi-w-75 ma-w-75 rounded" src="https://cbu01.alicdn.com/img/ibank/O1CN01c5vOEk1pfkk701Hcq_!!2206794655388-0-cib.310x310.jpg" onerror="this.onerror='';this.src='https://www.basetao.com/style/index/images/default.gif'">
+                                                    </a>
+                                                </td>
+                                                <td class="border-bottom-0 pt-0">
+                                                    <p class="mb-0">
+                                                        <a target="_blank" class="d-inline-block ma-w-300 text-truncate text-orange" href="https://detail.1688.com/offer/669072322900.html?spm=a262uh.11734178.favorite-offers-offer-list-offer4.2.4ba72ef655x8WV">
+                                                            短裤2条，1个袋装---美式短裤男不过膝篮球裤跑步透气网眼训练裤吸湿排汗速干健身短裤
+                                                        </a>
+                                                    </p>
+                                                    <p class="mb-0"><b>Remove packaging:</b>&nbsp;No</p>
+                                                    <p class="mb-0"><b>Color:</b>&nbsp;blue <b>Size:</b>&nbsp;M</p>
+                                                </td>
+                                                <td class="text-center border-bottom-0">¥<span class="text-orange">64</span>&nbsp;*&nbsp;1</td>
+                                                <td class="text-center border-bottom-0">¥<span class="text-orange">10</span></td>
+                                                <td class="text-center border-bottom-0">¥<span class="text-orange">74</span></td>
+                                                <td class="border-bottom-0">
+                                                    <p class="mb-0 text-center">
+                                                        <a href="#" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Messages"><i class="bi bi-chat-fill text-success"></i></a>
+                                                    </p>
+                                                    <p class="mb-0 text-center">
+                                                        <a type="button" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Cancel"><i class="bi bi-trash-fill text-danger"></i></a>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
